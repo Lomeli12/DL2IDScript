@@ -103,11 +103,14 @@ def create_or_replace_mod():
     replace_pak = input("Replace data2.pak, if it exists? (Y/N): ")
     mod_data_pak = os.path.join(data_0_parent_dir, BASE_DATA_NAME + "2" + DATA_PAK_EXT)
     if replace_pak.lower() == "n":
+        print("-> Looking for unused data pak number")
         mod_data_pak = find_suitable_pak_name(2)
+        print("-> Using " + os.path.basename(mod_data_pak))
     elif replace_pak.lower() != "y":
         create_or_replace_mod()
 
-    package_mod(mod_data_pak,)
+    package_mod(mod_data_pak)
+
 
 def package_mod(data_pak):
     print("-> Creating " + data_pak + "!")
