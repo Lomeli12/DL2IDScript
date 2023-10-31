@@ -165,3 +165,7 @@ DL2IDScript.dist/
 DL2IDScript.onefile-build/
 nuitka-crash-report.xml
 DL2IDScript.exe
+msys-2.0.dll
+
+# Other
+DL2IDScript.zip
