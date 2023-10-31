@@ -21,10 +21,8 @@
 
 import os
 import shutil
-import sys
 import pathlib
 import zipfile
-import fileinput
 
 BASE_DATA_NAME = "data"
 DATA_PAK_EXT = ".pak"
