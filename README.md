@@ -12,7 +12,7 @@ A simple Python3 script for quickly creating and up-to-date Infinite Weapon Dura
 3. Place `DL2IDScript.py` into the same folder as your `data0.pak` file.
     1. On Steam, right-click `Dying Light 2`, go under *Manage*, then click on *Browse local files*.
     2. Open the `ph` folder and then the  `source` folder. `data0.pak` should be in there.
-4. Open up Command Prompt (or your terminal of choice) in the source folder.
+4. Open up Command Prompt (or your terminal of choice) in the `source` folder.
     1. On Windows 11, you can right-click an empty spot and select *Open in Terminal*.
     2. On Windows 10 and lower, you can hold `Shift` while right-clicking an empty spot and select *Open command window
        here*.
@@ -27,7 +27,7 @@ python DL2IDScript.py
 ### Using the executable
 
 1. Download the newest `DL2IDScript.zip` from the [*Releases*](https://github.com/Lomeli12/DL2IDScript/releases) page.
-2. Open the zip file and copy `DL2IDScript.exe` and `msys-2.0.dll` into the same folder as your `data0.pak` file.
+2. Open the zip file and copy `DL2IDScript.exe` into the same folder as your `data0.pak` file.
     1. On Steam, right-click `Dying Light 2`, go under *Manage*, then click on *Browse local files*.
     2. Open the `ph` folder and then the  `source` folder. `data0.pak` should be in there.
 3. Double-click on `DL2IDScript.exe` and follow the prompts to generate an up-to-date mod.
