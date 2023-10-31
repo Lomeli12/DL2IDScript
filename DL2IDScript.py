@@ -170,7 +170,6 @@ def handle_data_0_location(file_path):
         print(file_path + " does not exist!")
 
     if not file_correct:
-        print("Could not find data0.pak location!")
         handle_data_0_location(input("Type in the path for data0.pak: "))
 
 
