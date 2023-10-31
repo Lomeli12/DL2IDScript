@@ -162,6 +162,8 @@ def handle_data_0_location(file_path):
             data_0_parent_dir = pathlib.Path(file_path).parent
             file_correct = True
         elif correct.lower() == "q":
+            print("-> Stopping script...")
+            os.system('pause')
             exit()
     else:
         print("Could not find data0.pak at " + file_path)
