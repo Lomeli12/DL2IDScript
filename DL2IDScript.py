@@ -193,3 +193,4 @@ def intro_message():
 intro_message()
 handle_data_0_location(os.path.join(os.getcwd(), DATA_0_FILE_NAME))
 create_mod()
+os.system('pause')
