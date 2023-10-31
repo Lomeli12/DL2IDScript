@@ -1,11 +1,8 @@
 # DL2IDScript
 
-***
 A simple Python3 script for quickly creating and up-to-date Infinite Weapon Durability mod for Dying Light 2
 
 ## How to use
-
-***
 
 ### Using Python (Recommended)
 
@@ -38,11 +35,11 @@ python DL2IDScript.py
 ## Known issues
 
 * During events, the event break the player variable files this script patches for infinite weapon durability. Playing
-  in offline mode until the event ends might solve this issue. See 
-  [here](https://forums.nexusmods.com/index.php?/topic/11042943-unlimited-weapon-durability/page-16#entry114300993). 
+  in offline mode until the event ends might solve this issue. See
+  [here](https://forums.nexusmods.com/index.php?/topic/11042943-unlimited-weapon-durability/page-16#entry114300993).
 
 ## Thanks to
 
 * [Nuitka](https://github.com/Nuitka/Nuitka), used to create executable file.
-* Obscene911 from the NexusMods forum, for explaining 
-  [how to create your own infinite weapon durability mod.](https://forums.nexusmods.com/index.php?/topic/11042943-unlimited-weapon-durability/page-15#entry113433628)
+* Obscene911 from the NexusMods forum, for explaining
+  [how to create your own infinite weapon durability mod](https://forums.nexusmods.com/index.php?/topic/11042943-unlimited-weapon-durability/page-15#entry113433628).
