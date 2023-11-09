@@ -20,6 +20,7 @@
 # SOFTWARE.
 
 import os
+import stat
 import shutil
 import pathlib
 import zipfile
@@ -112,14 +113,34 @@ def create_or_replace_mod():
     package_mod(mod_data_pak)
 
 
+# The following is copied from https://github.com/bboe/deterministic_zip/
+# Saves so many headaches from mismatched hashes
+def add_file(zip_file, path, zip_path=None):
+    permission = 0o555 if os.access(path, os.X_OK) else 0o444
+    zip_info = zipfile.ZipInfo.from_file(path, zip_path)
+    zip_info.date_time = (2019, 1, 1, 0, 0, 0)
+    zip_info.external_attr = (stat.S_IFREG | permission) << 16
+    with open(path, "rb") as fp:
+        zip_file.writestr(
+            zip_info,
+            fp.read(),
+            zipfile.ZIP_DEFLATED,
+            9,
+        )
+# End of copying
+
+
 def package_mod(data_pak):
     print("-> Creating " + data_pak + "!")
     if os.path.exists(data_pak):
         print("-> Removing old " + os.path.basename(data_pak))
         os.remove(data_pak)
 
-    shutil.make_archive(data_pak, 'zip', temp_folder)
-    os.rename(data_pak + ".zip", data_pak)
+    with zipfile.ZipFile(data_pak, "w") as new_pak:
+        for root, dirs, files in os.walk(temp_folder):
+            for file in files:
+                add_file(new_pak, os.path.join(root, file),
+                         os.path.relpath(os.path.join(root, file), os.path.join(scripts_dir, '..')))
 
 
 def clean_up():
