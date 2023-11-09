@@ -43,3 +43,4 @@ python DL2IDScript.py
 * [Nuitka](https://github.com/Nuitka/Nuitka), used to create executable file.
 * Obscene911 from the NexusMods forum, for explaining
   [how to create your own infinite weapon durability mod](https://forums.nexusmods.com/index.php?/topic/11042943-unlimited-weapon-durability/page-15#entry113433628).
+* Bryce Boe, for his [deterministic_zip script](https://github.com/bboe/deterministic_zip), which helped me solve an issue with identical mods having different hashes, preventing multiplayer use.
